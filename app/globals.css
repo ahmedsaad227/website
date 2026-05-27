@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 40 30% 92%;
+    --card: 0 0% 7%;
+    --card-foreground: 40 30% 92%;
+    --primary: 40 30% 92%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 10% 65%;
+    --accent: 42 65% 52%;
+    --accent-foreground: 0 0% 4%;
+    --gold: 42 65% 52%;
+    --gold-foreground: 0 0% 4%;
+    --border: 40 15% 18%;
+    --input: 40 15% 18%;
+    --ring: 42 65% 52%;
+    --radius: 0.5rem;
+  }
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html { scroll-behavior: smooth; }
+}
+
+@layer utilities {
+  .gold-text {
+    background: linear-gradient(135deg, #d4af37 0%, #f5d77a 50%, #d4af37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #f5d77a 50%, #d4af37 100%);
+  }
+  .glass {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+  }
+  .glass-strong {
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  .luxury-shadow {
+    box-shadow: 0 25px 60px -15px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.08);
+  }
+  .gold-border {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  .noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+}
+
+::selection { background: #d4af37; color: #000; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d4af37, #8a6d1f); border-radius: 4px; }

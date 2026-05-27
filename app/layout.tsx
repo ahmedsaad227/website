@@ -1,19 +1,25 @@
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Cairo, Playfair_Display } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" })
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  variable: "--font-cairo",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+})
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" })
 
 export const metadata: Metadata = {
-  title: "Apex Estate — Luxury Real Estate Worldwide",
+  title: "أبيكس العقارية | Apex Estate — عقارات فاخرة",
   description:
-    "Discover the world's most exclusive properties. Luxury villas, penthouses & commercial spaces curated by Apex Estate.",
-  keywords: ["luxury real estate", "villas", "penthouse", "investment", "Apex Estate"],
+    "اكتشف مستقبلك العقاري الفاخر مع أبيكس العقارية. فلل، شقق، واستثمارات عقارية بمعايير عالمية في دبي وأبوظبي والرياض.",
+  keywords: ["عقارات فاخرة", "فلل دبي", "شقق فاخرة", "استثمار عقاري", "أبيكس العقارية", "Apex Estate"],
   openGraph: {
-    title: "Apex Estate — Luxury Real Estate Worldwide",
-    description: "Find your dream property with Apex Estate.",
+    title: "أبيكس العقارية — عقارات فاخرة عالمياً",
+    description: "اكتشف مستقبلك العقاري الفاخر",
     type: "website",
+    locale: "ar_AE",
   },
 }
 
@@ -25,7 +31,7 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`bg-background ${inter.variable} ${playfair.variable}`}>
+    <html lang="ar" dir="rtl" className={`bg-background ${cairo.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )

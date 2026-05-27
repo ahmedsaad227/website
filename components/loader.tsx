@@ -22,14 +22,14 @@ export function Loader() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="font-serif text-4xl mb-6"
+              className="font-sans text-4xl mb-6 font-black"
             >
-              Apex <span className="gold-text italic">Estate</span>
+              أبيكس <span className="gold-text">العقارية</span>
             </motion.div>
             <div className="h-px w-48 mx-auto bg-border overflow-hidden">
               <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
+                initial={{ x: "100%" }}
+                animate={{ x: "-100%" }}
                 transition={{ duration: 1.2, ease: "easeInOut" }}
                 className="h-full gold-gradient"
               />

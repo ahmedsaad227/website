@@ -3,12 +3,12 @@
 import { motion } from "framer-motion"
 
 const items = [
-  { src: "/gallery-1.jpg", h: "row-span-2", alt: "Luxury living room" },
-  { src: "/gallery-2.jpg", h: "", alt: "Master bathroom" },
-  { src: "/gallery-3.jpg", h: "", alt: "Infinity pool" },
-  { src: "/gallery-4.jpg", h: "row-span-2", alt: "Designer kitchen" },
-  { src: "/gallery-5.jpg", h: "", alt: "Bedroom suite" },
-  { src: "/gallery-6.jpg", h: "", alt: "Aerial beachfront" },
+  { src: "/gallery-1.jpg", h: "row-span-2", alt: "غرفة معيشة فاخرة" },
+  { src: "/gallery-2.jpg", h: "", alt: "حمام رئيسي" },
+  { src: "/gallery-3.jpg", h: "", alt: "مسبح لا نهائي" },
+  { src: "/gallery-4.jpg", h: "row-span-2", alt: "مطبخ بتصميم فاخر" },
+  { src: "/gallery-5.jpg", h: "", alt: "جناح غرفة النوم" },
+  { src: "/gallery-6.jpg", h: "", alt: "إطلالة جوية على الواجهة البحرية" },
 ]
 
 export function Gallery() {
@@ -25,15 +25,14 @@ export function Gallery() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <div className="h-px w-10 gold-gradient" />
-              <span className="text-xs tracking-[0.4em] uppercase gold-text">Inside the Estates</span>
+              <span className="text-xs tracking-arabic gold-text font-semibold">داخل العقارات</span>
             </div>
-            <h2 className="font-serif text-4xl lg:text-6xl text-balance">
-              A <span className="italic gold-text">visual journey</span>
+            <h2 className="font-sans text-4xl lg:text-6xl text-balance font-black arabic-display">
+              رحلة <span className="gold-text">بصرية</span>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md">
-            Step inside our portfolio of breathtaking interiors, oceanfront retreats, and
-            architectural masterpieces.
+          <p className="text-muted-foreground max-w-md text-lg leading-relaxed">
+            تجوّل داخل محفظتنا من التصاميم الداخلية الخلابة، وملاذات الواجهة البحرية، والروائع المعمارية الفريدة.
           </p>
         </motion.div>
 

@@ -6,12 +6,12 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const links = [
-  { name: "Home", href: "#home" },
-  { name: "Properties", href: "#properties" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  { name: "الرئيسية", href: "#home" },
+  { name: "العقارات", href: "#properties" },
+  { name: "من نحن", href: "#about" },
+  { name: "خدماتنا", href: "#services" },
+  { name: "آراء العملاء", href: "#testimonials" },
+  { name: "تواصل معنا", href: "#contact" },
 ]
 
 export function Navbar() {
@@ -35,24 +35,24 @@ export function Navbar() {
       )}
     >
       <nav className="container mx-auto flex items-center justify-between px-6">
-        <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-sm gold-gradient flex items-center justify-center text-black font-serif font-bold text-lg">
+        <a href="#home" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-sm gold-gradient flex items-center justify-center text-black font-serif font-bold text-xl">
             A
           </div>
-          <span className="font-serif text-xl tracking-wide">
-            Apex <span className="gold-text font-semibold">Estate</span>
+          <span className="font-sans text-xl tracking-wide font-bold">
+            أبيكس <span className="gold-text">العقارية</span>
           </span>
         </a>
 
-        <ul className="hidden lg:flex items-center gap-10">
+        <ul className="hidden lg:flex items-center gap-9">
           {links.map((l) => (
             <li key={l.name}>
               <a
                 href={l.href}
-                className="text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors relative group"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group font-medium"
               >
                 {l.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px gold-gradient group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 right-0 w-0 h-px gold-gradient group-hover:w-full transition-all duration-300" />
               </a>
             </li>
           ))}
@@ -61,20 +61,20 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="/admin"
-            className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:gold-text transition-colors"
+            className="text-xs tracking-arabic text-muted-foreground hover:gold-text transition-colors"
           >
-            Admin
+            لوحة التحكم
           </a>
           <a
             href="#contact"
-            className="px-5 py-2.5 text-xs tracking-[0.2em] uppercase gold-border hover:bg-[hsl(var(--gold))] hover:text-black transition-all duration-300"
+            className="px-6 py-2.5 text-xs tracking-arabic gold-border hover:bg-[hsl(var(--gold))] hover:text-black transition-all duration-300 font-medium"
           >
-            Book Viewing
+            احجز معاينة
           </a>
         </div>
 
         <button
-          aria-label="Menu"
+          aria-label="القائمة"
           className="lg:hidden text-foreground"
           onClick={() => setOpen((o) => !o)}
         >
@@ -96,12 +96,21 @@ export function Navbar() {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block py-3 border-b border-border/40 text-sm tracking-wide hover:gold-text"
+                    className="block py-3 border-b border-border/40 text-sm hover:gold-text font-medium"
                   >
                     {l.name}
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/admin"
+                  onClick={() => setOpen(false)}
+                  className="block py-3 text-sm hover:gold-text font-medium"
+                >
+                  لوحة التحكم
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}

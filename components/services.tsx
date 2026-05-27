@@ -4,12 +4,12 @@ import { motion } from "framer-motion"
 import { Key, TrendingUp, Briefcase, Home, Tag, ShieldCheck } from "lucide-react"
 
 const services = [
-  { icon: Tag, title: "Buying", desc: "Personalized property acquisition with discreet negotiations and expert valuation." },
-  { icon: Key, title: "Selling", desc: "Strategic marketing campaigns that position your property for maximum value." },
-  { icon: Home, title: "Property Management", desc: "Full-service stewardship for absentee owners and global portfolios." },
-  { icon: TrendingUp, title: "Investment Consulting", desc: "Data-driven insights for high-yield acquisitions and emerging markets." },
-  { icon: Briefcase, title: "Luxury Rentals", desc: "Curated short and long-term residences for executives and global travelers." },
-  { icon: ShieldCheck, title: "Private Concierge", desc: "Bespoke services including legal, design, and lifestyle management." },
+  { icon: Tag, title: "شراء عقارات", desc: "نقدم لك خدمة شخصية لاقتناء العقارات مع مفاوضات سرية وتقييم خبير لكل صفقة." },
+  { icon: Key, title: "بيع عقارات", desc: "حملات تسويقية استراتيجية تضع عقارك في موقع متميز لتحقيق أعلى قيمة سوقية." },
+  { icon: Home, title: "إدارة الأملاك", desc: "خدمة شاملة لإدارة العقارات للملاك المغتربين ومحافظ الاستثمار العالمية." },
+  { icon: TrendingUp, title: "استشارات استثمارية", desc: "رؤى مبنية على بيانات السوق لاستثمارات عالية العائد في الأسواق الواعدة." },
+  { icon: Briefcase, title: "إيجارات فاخرة", desc: "إقامات مختارة بعناية قصيرة وطويلة المدى للتنفيذيين والمسافرين العالميين." },
+  { icon: ShieldCheck, title: "خدمات كونسيرج خاصة", desc: "خدمات حصرية تشمل الاستشارات القانونية والتصميم وإدارة نمط الحياة الفاخر." },
 ]
 
 export function Services() {
@@ -25,11 +25,11 @@ export function Services() {
         >
           <div className="flex items-center gap-3 mb-5 justify-center">
             <div className="h-px w-10 gold-gradient" />
-            <span className="text-xs tracking-[0.4em] uppercase gold-text">What We Offer</span>
+            <span className="text-xs tracking-arabic gold-text font-semibold">ما نقدمه</span>
             <div className="h-px w-10 gold-gradient" />
           </div>
-          <h2 className="font-serif text-4xl lg:text-6xl text-balance">
-            A complete suite of <span className="italic gold-text">luxury services</span>.
+          <h2 className="font-sans text-4xl lg:text-6xl text-balance font-black arabic-display leading-tight">
+            باقة متكاملة من <span className="gold-text">الخدمات الفاخرة</span>.
           </h2>
         </motion.div>
 
@@ -43,14 +43,14 @@ export function Services() {
               transition={{ duration: 0.5, delay: i * 0.06 }}
               className="group bg-background p-10 hover:bg-card transition-all duration-500 relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-px gold-gradient scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700" />
+              <div className="absolute top-0 right-0 w-full h-px gold-gradient scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-700" />
               <s.icon className="w-9 h-9 gold-text mb-6 group-hover:scale-110 transition-transform duration-500" />
-              <h3 className="font-serif text-2xl mb-3 group-hover:gold-text transition-colors">
+              <h3 className="font-sans text-2xl mb-3 font-bold group-hover:gold-text transition-colors">
                 {s.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">{s.desc}</p>
-              <div className="mt-6 text-xs tracking-[0.3em] uppercase text-muted-foreground group-hover:gold-text transition-colors">
-                Learn More →
+              <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
+              <div className="mt-6 text-xs tracking-arabic text-muted-foreground group-hover:gold-text transition-colors font-semibold">
+                اعرف المزيد ←
               </div>
             </motion.div>
           ))}
